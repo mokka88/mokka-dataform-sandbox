@@ -1,4 +1,0 @@
-config {
-  schema: "sw_stage",
-  name: "src1"
-}

@@ -1,0 +1,10 @@
+config {
+  type: "table",
+  database: constants.stage_project,
+  schema: constants.stage_dataset,
+  name: "tenant_data"
+}
+
+SELECT 'tenant1' AS tenant, 'data1' AS tenant_data
+UNION ALL
+SELECT 'tenant2' AS tenant, 'data2' AS tenant_data

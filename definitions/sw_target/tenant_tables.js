@@ -1,4 +1,4 @@
 tenant_data(
     tags = ["tenant_tables"],
-    table = "tenant_data"
+    table = "single_tenant_data"
 )
