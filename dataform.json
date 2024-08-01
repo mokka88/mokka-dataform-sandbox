@@ -1,0 +1,7 @@
+{
+  "defaultSchema": "sw_stage",
+  "assertionSchema": "dataform_assertions",
+  "warehouse": "bigquery",
+  "defaultDatabase": "gabor-motko-sandbox",
+  "defaultLocation": "europe-west1"
+}
