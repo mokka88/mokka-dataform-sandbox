@@ -1,10 +1,22 @@
 config {
-  type: "table",
-  database: constants.stage_project,
-  schema: constants.stage_dataset,
-  name: "tenant_data"
+    type: "table",
+    database: constants.stage_project,
+    schema: constants.stage_dataset,
+    name: "tenant_data"
 }
 
-SELECT 'tenant1' AS tenant, 'data1' AS tenant_data
+SELECT
+  'tenant1' AS tenant,
+  'data1' AS tenant_data,
+  sayHello('tenant1') AS hello
 UNION ALL
-SELECT 'tenant2' AS tenant, 'data2' AS tenant_data
+SELECT
+  'tenant2' AS tenant,
+  'data2' AS tenant_data,
+  sayHello('tenant2') AS hello
+
+pre_operations {
+  CREATE TEMP FUNCTION
+    sayHello(name STRING)
+    RETURNS STRING AS ('Hello ' || name);
+}
